@@ -41,7 +41,7 @@
                   <a href="{{Route('viewthietbi')}}">Tạo Mới</a>
                 </li>
                 <li>
-                  <a href="">Danh Sách</a>
+                  <a href="{{Route('dsthietbi')}}">Danh Sách</a>
                 </li>
               </ul>
             </li>

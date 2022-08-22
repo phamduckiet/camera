@@ -129,12 +129,11 @@
                 var payload = {
                     'name'              :   $("#name").val(),
                     'slug'              :   $("#slug").val(),
-                    'name'              :   $("#name").val(),
-                    'slug'              :   $("#slug").val(),
-                    'name'              :   $("#name").val(),
-                    'slug'              :   $("#slug").val(),
-                    'name'              :   $("#name").val(),
-                    'slug'              :   $("#slug").val(),
+                    'price'              :   $("price").val(),
+                    'quantity'              :   $("#quatity").val(),
+                    'is_view'              :   $("#is_view").val(),
+                    'image'              :   $("#image").val(),
+                    'thietbi_id'              :   $("#thietbi_id").val(),
 
 
                 };

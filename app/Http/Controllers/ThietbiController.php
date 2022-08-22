@@ -41,9 +41,10 @@ class ThietbiController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function dsthietbi()
     {
-        //
+        $thietbi = thietbi::all();
+        return view('admin.page.thietbi.danhsach', compact('thietbi'));
     }
 
     /**
@@ -63,9 +64,15 @@ class ThietbiController extends Controller
      * @param  \App\Models\thietbi  $thietbi
      * @return \Illuminate\Http\Response
      */
-    public function edit(thietbi $thietbi)
+    public function edit($id)
     {
-        //
+        $listthietbi = thietbi::find($id);
+        if($listthietbi){
+            return response()->json(["data" => $listthietbi]);
+        }else {
+            toastr()->error("thiết bị không tồn tại !");
+            return $this->index();
+        }
     }
 
     /**
@@ -75,9 +82,12 @@ class ThietbiController extends Controller
      * @param  \App\Models\thietbi  $thietbi
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, thietbi $thietbi)
+    public function update(thietbiRequest $request)
     {
-        //
+        $data = $request->all();
+        $thietbi = thietbi::find($request->id);
+        $thietbi->update($data);
+        return response()->json(['status' => true]);
     }
 
     /**
