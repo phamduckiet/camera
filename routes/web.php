@@ -19,3 +19,8 @@ Route::get('/', function () {
 
 Route::get('/admin/taomoithietbi', [\App\Http\Controllers\ThietbiController::class, 'viewthietbi'])->name('viewthietbi');
 Route::post('/admin/taomoithietbi', [\App\Http\Controllers\ThietbiController::class, 'postthietbi'])->name('postthietbi');
+Route::get('/admin/danhsachthietbi', [\App\Http\Controllers\ThietbiController::class, 'dsthietbi'])->name('dsthietbi');
+Route::get('/admin/thietbi/edit/{id}', [\App\Http\Controllers\ThietbiController::class, 'edit']);
+Route::post('/admin/thietbi/update/{id}', [\App\Http\Controllers\ThietbiController::class, 'update']);
+
+
