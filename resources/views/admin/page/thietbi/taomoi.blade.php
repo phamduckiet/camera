@@ -12,7 +12,7 @@
 @endsection
 @section('content')
 <div class="container-fluid">
-    <form method="post" action="{{Route('postthietbi')}}">
+    {{-- <form method="post" action="{{Route('postthietbi')}}"> --}}
         @csrf
     <div class="row">
       <div class="col-sm-12">
@@ -23,13 +23,13 @@
                 <div class="col-6">
                   <div class="mb-3">
                     <label>Tên Thiết Bị</label>
-                    <input class="form-control" name="tenthietbi" type="text" data-bs-original-title="" title="">
+                    <input class="form-control" id="name" type="text" data-bs-original-title="" title="">
                   </div>
                 </div>
                 <div class="col-6">
                     <label>Hình Ảnh Minh Họa</label>
                     <div class="input-group">
-                        <input id="image" name="hinhanh" class="form-control">
+                        <input id="image"  class="form-control">
                         <a data-input="image" data-preview="holder-icon" class="lfm btn btn-light">
                             Choose
                         </a>
@@ -45,7 +45,7 @@
             </div>
             <div class="row text-center">
                 <div class="card-body">
-                  <button class="btn btn-success" type="submit" data-bs-original-title="" title="">Tạo Mới Thiết Bị</button>
+                  <button class="btn btn-success" id="create" data-bs-original-title="" title="">Tạo Mới Thiết Bị</button>
                 </div>
               </div>
             </div>
@@ -53,6 +53,62 @@
         </div>
       </div>
     </div>
-</form>
+{{-- </form> --}}
   </div>
+@endsection
+@section('js')
+    <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    </script>
+   <script>
+    $(document).ready(function(){
+            // $("#name").blur(function(){
+            //     $("#slug").val(toSlug($("#name").val()));
+            // });
+
+            // function toSlug(str) {
+            //     str = str.toLowerCase();
+            //     str = str
+            //         .normalize('NFD') // chuyển chuỗi sang unicode tổ hợp
+            //         .replace(/[\u0300-\u036f]/g, ''); // xóa các ký tự dấu sau khi tách tổ hợp
+            //     str = str.replace(/[đĐ]/g, 'd');
+            //     str = str.replace(/([^0-9a-z-\s])/g, '');
+            //     str = str.replace(/(\s+)/g, '-');
+            //     str = str.replace(/-+/g, '-');
+            //     str = str.replace(/^-+|-+$/g, '');
+            //     return str;
+            // }
+            $("#create").click(function(){
+
+                var payload = {
+                    'tenthietbi'              :   $("#name").val(),
+                    'hinhanh'              :   $("#image").val(),
+
+
+                };
+               $.ajax({
+                    url : '/admin/taomoithietbi',
+                    type: 'post',
+                    data: payload,
+                    success: function($xxx){
+                        if($xxx.status == true){
+                            toastr.success("Created category successfully!");
+                        }
+                        location.reload();
+                    },
+                    error: function($errors){
+                        var listErrors = $errors.responseJSON.errors;
+                        $.each(listErrors, function(key, value) {
+                            toastr.error(value[0]);
+                        });
+                    }
+                });
+            });
+     });
+
+</script>
 @endsection

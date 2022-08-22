@@ -1,6 +1,5 @@
-@jquery
-@toastr_js
-@toastr_render
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script src="/admin/assets/js/jquery-3.5.1.min.js"></script>
 <!-- Bootstrap js-->
 <script src="/admin/assets/js/bootstrap/bootstrap.bundle.min.js"></script>

@@ -16,6 +16,9 @@ class ThietbiController extends Controller
     public function viewthietbi()
     {
         return view('admin.page.thietbi.taomoi');
+
+
+
     }
 
     /**
@@ -27,8 +30,9 @@ class ThietbiController extends Controller
     {
         $data = $request->all();
         thietbi::create($data);
-        toastr()->success('Tạo Mới Thành Công !', 'Thông Báo');
-        return back();
+        // toastr()->success('Tạo Mới Thành Công !', 'Thông Báo');
+        return response()->json(['status' => true]);
+        // return back();
     }
 
     /**

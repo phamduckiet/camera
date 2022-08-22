@@ -27,5 +27,6 @@ class thietbiRequest extends FormRequest
             'tenthietbi' => 'required',
             'hinhanh' => 'required',
         ];
+
     }
 }
