@@ -34,19 +34,19 @@
               <tbody>
                 @foreach ($sanpham as $key => $value)
                 <tr class="table table-border-vertical">
-                    <th class="text-center" scope="row">{{ $key + 1 }}</th>
-                    <td class="text-center">{{ $value->name }}</td>
-                    <td class="text-center">{{ $value->slug }}</td>
-                    <td class="text-center">{{ $value->nameThietBi }}</td>
-                    <td class="text-center">{{ $value->price }}</td>
-                    <td class="text-center">{{ $value->quantity }}</td>
-                    <td class="text-center">{{ $value->describe }}</td>
-                    <td class="text-center">
-                        <span class="view {{$value->is_view == 1 ? 'text-success' : 'text-danger'}}" data-id="{{$value->id}}">{{ $value->is_view == 1 ? 'Hiện' : 'Ẩn' }} </span>
+                    <th class="text-center align-middle" scope="row">{{ $key + 1 }}</th>
+                    <td class="text-center align-middle">{{ $value->name }}</td>
+                    <td class="text-center align-middle">{{ $value->slug }}</td>
+                    <td class="text-center align-middle">{{ $value->nameThietBi }}</td>
+                    <td class="text-center align-middle">{{ $value->price }}</td>
+                    <td class="text-center align-middle">{{ $value->quantity }}</td>
+                    <td class="text-center align-middle">{{ $value->describe }}</td>
+                    <td class="text-center align-middle">
+                        <span class="btn view {{$value->is_view == 1 ? 'btn-success' : 'btn-danger'}}" data-id="{{$value->id}}">{{ $value->is_view == 1 ? 'Hiện' : 'Ẩn' }} </span>
                     </td>
-                    <td class="text-center"><img style="width:100px; height:100px" src="{{$value->image}}"></td>
+                    <td class="text-center align-middle"><img style="width:100px; height:100px" src="{{$value->image}}"></td>
 
-                    <td class="text-center text-nowrap">
+                    <td class="text-center align-middle text-nowrap">
                         <button data-delete={{$value->id}} type="button" class="btn btn-danger round waves-effect callDelete fa fa-trash-o" type="button" data-bs-toggle="modal" data-bs-target="#addNewCard"></button>
                         <button type="button" data-edit="{{ $value->id }}"
                             class="btn btn-success editProduct fa fa-gear callEdit" data-bs-toggle="modal"
@@ -312,12 +312,12 @@
                     } else {
                         toastr.success('Thay đổi thành công!');
                         if($data.is_view == 1){
-                            text.removeClass("text-danger");
-                            text.addClass("text-success");
+                            text.removeClass("btn-danger");
+                            text.addClass("btn-success");
                             text.html('Hiện');
                         } else {
-                            text.removeClass("text-success");
-                            text.addClass("text-danger");
+                            text.removeClass("btn-success");
+                            text.addClass("btn-danger");
                             text.html('Ẩn');
                         }
                     }
