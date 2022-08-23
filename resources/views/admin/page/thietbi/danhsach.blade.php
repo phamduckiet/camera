@@ -16,7 +16,7 @@
       <div class="card-body">
         <div class="table-responsive">
           <div id="basic-2_wrapper" class="dataTables_wrapper no-footer">
-            <table class="display dataTable no-footer" id="basic-2" role="grid" aria-describedby="basic-2_info">
+            <table class="display dataTable no-footer" id="datatable" role="grid" aria-describedby="basic-2_info">
               <thead>
                 <tr role="row">
                   <th class="text-center" scope="col">Stt</th>
@@ -34,7 +34,7 @@
                     <td class="text-center text-nowrap">
                         <button data-delete={{$value->id}} type="button" class="btn btn-danger round waves-effect callDelete fa fa-trash-o" type="button" data-bs-toggle="modal" data-bs-target="#addNewCard"></button>
                         <button type="button" data-edit="{{ $value->id }}"
-                            class="btn btn-success editcategory fa fa-gear" data-bs-toggle="modal"
+                            class="btn btn-success editcategory fa fa-gear callEdit" data-bs-toggle="modal"
                             data-bs-target="#edit-thietbi">
 
                         </button>
@@ -107,7 +107,7 @@
                                                             <div class="col-md-4">
                                                                 <label>Hình Ảnh Thiết Bị</label>
                                                                 <div class="input-group">
-                                                                  <input id="hinhanh" class="form-control" required>
+                                                                  <input id="hinhanh" name="hinhanh" class="form-control" required>
                                                                   <a id="lfm" data-input="hinhanh" data-preview="hinhanh1" class="lfm btn btn-light">
                                                                   Chọn
                                                                   </a>
@@ -220,4 +220,25 @@
 
         });
     </script>
+
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+<script type="text/javascript"></script>
+<script>
+    $(document).ready(function() {
+    var table = $('#datatable').DataTable();
+    table.on('click', '.callEdit', function() {
+        $tr = $(this).closest('tr');
+    if ($($tr).hasClass('child')) {
+        $tr = $tr.prev('.parent');
+    }
+    var data = table.row($tr).data();
+    // console.log(data);
+    var src = $('#hinhanh').attr('src');
+    $('#hinhanh1').attr('src', $tr.find('img').attr('src'));
+
+    });
+    });
+</script>
+
 @endsection
