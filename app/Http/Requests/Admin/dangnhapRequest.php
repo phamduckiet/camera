@@ -4,7 +4,7 @@ namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class thietbiRequest extends FormRequest
+class dangnhapRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,23 +24,21 @@ class thietbiRequest extends FormRequest
     public function rules()
     {
         return [
-            'tenthietbi' => 'required|min:2|max:100',
-            'hinhanh' => 'required',
+                'username'      =>'required',
+                'password'      =>'required',
         ];
     }
     public function messages()
     {
         return [
             'required' => ':attribute không được để trống',
-            'max'      => ':attribute không được quá 100 ký tự',
-            'min'      => ':attribute không được dưới 2 ký tự',
         ];
     }
     public function attributes()
     {
         return [
-            'tenthietbi'         => 'Tên Thiết Bị',
-            'hinhanh'      => 'Hình Ảnh',
+            'username'         => 'Tên đăng nhập',
+            'password'      => 'Mật khẩu',
         ];
     }
 }

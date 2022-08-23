@@ -21,6 +21,7 @@ return array(
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Http\\Requests\\Admin\\thietbiRequest' => $baseDir . '/app/Http/Requests/Admin/thietbiRequest.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
+    'App\\Models\\taikhoanadmin' => $baseDir . '/app/Models/taikhoanadmin.php',
     'App\\Models\\thietbi' => $baseDir . '/app/Models/thietbi.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',

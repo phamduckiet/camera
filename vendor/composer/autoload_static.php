@@ -560,6 +560,7 @@ class ComposerStaticInit4349ca83d731994df4d3aff4240d5e33
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Requests\\Admin\\thietbiRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Admin/thietbiRequest.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Models\\taikhoanadmin' => __DIR__ . '/../..' . '/app/Models/taikhoanadmin.php',
         'App\\Models\\thietbi' => __DIR__ . '/../..' . '/app/Models/thietbi.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',

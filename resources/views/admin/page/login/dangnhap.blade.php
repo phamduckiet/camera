@@ -96,31 +96,25 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-center form_container">
-                    <form>
-                        <h2 class="text-center" style="color: #064706">Tạo Tài Khoản Admin !</h2>
+                    <form method="post" action="{{Route('postdangnhap')}}">
+                        @csrf
+                        <h2 class="text-center" style="color: #064706">Đăng Nhập Admin !</h2>
                         <br>
                         <div class="input-group mb-2">
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                             </div>
-                            <input type="text" id="username" class="form-control input_user" value="" placeholder="Tên Đăng Nhập">
+                            <input type="text" name="username" class="form-control input_user" value="" placeholder="Tên Đăng Nhập">
                         </div>
                         <div class="input-group mb-2">
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password" id="password" class="form-control input_pass" value=""
+                            <input type="password" name="password" class="form-control input_pass" value=""
                                 placeholder="Mật Khẩu">
                         </div>
-                        <div class="input-group mb-2">
-                            <div class="input-group-append">
-                                <span class="input-group-text"><i class="fas fa-key"></i></span>
-                            </div>
-                            <input type="password" id="repassword" class="form-control input_pass" value=""
-                                placeholder="Nhập Lại Mật Khẩu">
-                        </div>
                         <div class="d-flex justify-content-center mt-3 login_container">
-                            <button type="button" id="buttonRegister" class="btn login_btn">Thiết Lập</button>
+                            <button type="submit" class="btn login_btn">Đăng Nhập</button>
                         </div>
                     </form>
                 </div>
