@@ -31,4 +31,11 @@ Route::group(['prefix' => '/admin' ,'middleware' => 'checkAdmin'], function(){
 
 
 
+Route::get('/admin/taomoisanpham', [\App\Http\Controllers\SanPhamController::class, 'create']);
+Route::post('/admin/taomoisanpham', [\App\Http\Controllers\SanPhamController::class, 'store']);
+Route::get('/admin/danhsachsanpham', [\App\Http\Controllers\SanPhamController::class, 'index']);
+Route::get('/admin/sanpham/edit/{id}', [\App\Http\Controllers\SanPhamController::class, 'edit']);
+Route::post('/admin/sanpham/update/{id}', [\App\Http\Controllers\SanPhamController::class, 'update']);
+Route::get('/admin/sanpham/delete/{id}', [\App\Http\Controllers\SanPhamController::class, 'delete']);
+Route::post('/changeView', [\App\Http\Controllers\SanPhamController::class, 'changeValueView'])->name('change.View');
 

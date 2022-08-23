@@ -27,6 +27,7 @@ class thietbiRequest extends FormRequest
             'tenthietbi' => 'required|min:2|max:100',
             'hinhanh' => 'required',
         ];
+
     }
     public function messages()
     {
