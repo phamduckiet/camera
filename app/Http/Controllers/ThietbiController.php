@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Admin\thietbiRequest;
+use App\Models\SanPham;
 use App\Models\thietbi;
 use Illuminate\Http\Request;
 
@@ -94,8 +95,17 @@ class ThietbiController extends Controller
      * @param  \App\Models\thietbi  $thietbi
      * @return \Illuminate\Http\Response
      */
-    public function destroy(thietbi $thietbi)
+    public function delete($id)
     {
-        //
+        $thietbi = thietbi::find($id);
+        $sanpham = SanPham::where('thietbi_id', $id)->get();
+        if($thietbi){
+            $thietbi->delete();
+            return response()->json(['status' => true]);
+            $sanpham->delete();
+            return response()->json(['status' => true]);
+        } else {
+            return response()->json(['status' => false]);
+        }
     }
 }

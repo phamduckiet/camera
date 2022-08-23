@@ -59,7 +59,7 @@
                 <div class="modal-body">
                     <form>
                         <div class="mb-3">
-                            <input type="hidden" id="category_id">
+                            <input type="hidden" id="thietbi_id">
                             <label class="col-form-label fa fa-exclamation-triangle" style="color: red" for="recipient-name">  Tất cả sản phẩm thuộc thiết bị sẽ bị xóa !!!</label>
                             <label class="col-form-label" for="recipient-name">Bạn có chắc chắn xóa thiết bị này ?</label>
                         </div>
@@ -80,7 +80,7 @@
                 </div>
                 <div class="modal-body pb-5 px-sm-5 pt-50" data-select2-id="82">
                     <div class="text-center mb-2">
-                        <input type="hidden" id="category_id">
+                        <input type="hidden" id="thietbi_id">
                         <h1 class="mb-1">Chỉnh Sữa Thiết Bị</h1>
                     </div>
                     <form id="editForm" class="row gy-1 pt-75" onsubmit="return false" novalidate="novalidate">
@@ -160,7 +160,7 @@
             $(".editcategory").click(function(e) {
 
                 var id = $(this).data('edit');
-                $("#category_id").val(id);
+                $("#thietbi_id").val(id);
                 e.preventDefault();
 
                 $.ajax({
@@ -199,24 +199,24 @@
                         });
                       });
                     });
-                // $(".callDelete").click(function(){
-                // var id = $(this).data('delete');
-                // console.log(id);
-                // row = $(this);
-                // $("#category_id").val(id);
-                // });
-                // $("#delete_category").click(function(){
-                //     var id = $("#category_id").val();
-                //     $.ajax({
-                //         url: '/admin/category/delete_category/' + id,
-                //         type: 'get',
-                //         success: function($data) {
-                //             toastr.warning('You have successfully delete! !');
-                //             $(row).closest('tr').remove();
-                //             $('#addNewCard').modal('hide');
-                //         }
-                //     });
-                // });
+                $(".callDelete").click(function(){
+                var id = $(this).data('delete');
+                console.log(id);
+                row = $(this);
+                $("#thietbi_id").val(id);
+                });
+                $("#delete_category").click(function(){
+                    var id = $("#thietbi_id").val();
+                    $.ajax({
+                        url: '/admin/thietbi/xoa_thietbi/' + id,
+                        type: 'get',
+                        success: function($data) {
+                            toastr.error('Bạn đã xóa thành công !');
+                            $(row).closest('tr').remove();
+                            $('#addNewCard').modal('hide');
+                        }
+                    });
+                });
 
         });
     </script>

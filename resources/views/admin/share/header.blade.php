@@ -20,36 +20,16 @@
       </div>
       <div class="nav-right col-8 pull-right right-header p-0">
         <ul class="nav-menus">
-          <li class="onhover-dropdown">
-            <div class="notification-box"><i data-feather="bell"> </i><span class="badge rounded-pill badge-secondary">4</span></div>
-            <ul class="notification-dropdown onhover-show-div">
-              <li><i data-feather="bell"></i>
-                <h6 class="f-18 mb-0">Notitications</h6>
-              </li>
-              <li>
-                <p><i class="fa fa-circle-o me-3 font-primary"> </i>Delivery processing <span class="pull-right">10 min.</span></p>
-              </li>
-              <li>
-                <p><i class="fa fa-circle-o me-3 font-success"></i>Order Complete<span class="pull-right">1 hr</span></p>
-              </li>
-              <li>
-                <p><i class="fa fa-circle-o me-3 font-info"></i>Tickets Generated<span class="pull-right">3 hr</span></p>
-              </li>
-              <li>
-                <p><i class="fa fa-circle-o me-3 font-danger"></i>Delivery Complete<span class="pull-right">6 hr</span></p>
-              </li>
-              <li><a class="btn btn-primary" href="#">Check all notification</a></li>
-            </ul>
-          </li>
           <li class="maximize"><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize"></i></a></li>
           <li class="profile-nav onhover-dropdown p-0 me-0">
             <div class="media profile-media"><img class="b-r-10" src="/admin/assets/images/dashboard/profile.jpg" alt="">
-              <div class="media-body"><span>Pham Duc Kiet</span>
+              <div class="media-body"><span>Tài Khoản</span>
                 <p class="mb-0 font-roboto">Admin <i class="middle fa fa-angle-down"></i></p>
               </div>
             </div>
             <ul class="profile-dropdown onhover-show-div">
-              <li><a href="/admin/logout"><i data-feather="log-in"> </i><span>Đăng Xuất</span></a></li>
+              <li><a href="/admin/dangkytaikhoan"><i> </i><span style="color: rgb(0, 204, 255)">Tạo Admin mới</span></a></li>
+              <li><a href="/admin/logout"><i data-feather="log-out"> </i><span>Đăng Xuất</span></a></li>
             </ul>
           </li>
         </ul>

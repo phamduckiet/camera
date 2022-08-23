@@ -27,15 +27,17 @@ Route::group(['prefix' => '/admin' ,'middleware' => 'checkAdmin'], function(){
     Route::get('/danhsachthietbi', [\App\Http\Controllers\ThietbiController::class, 'dsthietbi'])->name('dsthietbi');
     Route::get('/thietbi/edit/{id}', [\App\Http\Controllers\ThietbiController::class, 'edit']);
     Route::post('/thietbi/update/{id}', [\App\Http\Controllers\ThietbiController::class, 'update']);
+    Route::get('/thietbi/xoa_thietbi/{id}', [\App\Http\Controllers\ThietbiController::class, 'delete']);
+    Route::get('/taomoisanpham', [\App\Http\Controllers\SanPhamController::class, 'create'])->name('taomoisanpham');
+    Route::post('/taomoisanpham', [\App\Http\Controllers\SanPhamController::class, 'store']);
+    Route::get('/danhsachsanpham', [\App\Http\Controllers\SanPhamController::class, 'index'])->name('danhsachsanpham');
+    Route::get('/sanpham/edit/{id}', [\App\Http\Controllers\SanPhamController::class, 'edit']);
+    Route::post('/sanpham/update/{id}', [\App\Http\Controllers\SanPhamController::class, 'update']);
+    Route::get('/sanpham/delete/{id}', [\App\Http\Controllers\SanPhamController::class, 'delete']);
+    Route::post('/changeView', [\App\Http\Controllers\SanPhamController::class, 'changeValueView'])->name('change.View');
 });
 
 
 
-Route::get('/admin/taomoisanpham', [\App\Http\Controllers\SanPhamController::class, 'create']);
-Route::post('/admin/taomoisanpham', [\App\Http\Controllers\SanPhamController::class, 'store']);
-Route::get('/admin/danhsachsanpham', [\App\Http\Controllers\SanPhamController::class, 'index']);
-Route::get('/admin/sanpham/edit/{id}', [\App\Http\Controllers\SanPhamController::class, 'edit']);
-Route::post('/admin/sanpham/update/{id}', [\App\Http\Controllers\SanPhamController::class, 'update']);
-Route::get('/admin/sanpham/delete/{id}', [\App\Http\Controllers\SanPhamController::class, 'delete']);
-Route::post('/changeView', [\App\Http\Controllers\SanPhamController::class, 'changeValueView'])->name('change.View');
+
 

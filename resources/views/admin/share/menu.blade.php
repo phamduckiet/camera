@@ -53,10 +53,10 @@
               </a>
               <ul class="sidebar-submenu">
                 <li>
-                  <a href="">Tạo Mới</a>
+                  <a href="{{Route('taomoisanpham')}}">Tạo Mới</a>
                 </li>
                 <li>
-                  <a href="">Danh Sách</a>
+                  <a href="{{Route('danhsachsanpham')}}">Danh Sách</a>
                 </li>
               </ul>
             </li>
