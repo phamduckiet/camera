@@ -30,9 +30,7 @@ class ThietbiController extends Controller
     {
         $data = $request->all();
         thietbi::create($data);
-        // toastr()->success('Tạo Mới Thành Công !', 'Thông Báo');
         return response()->json(['status' => true]);
-        // return back();
     }
 
     /**

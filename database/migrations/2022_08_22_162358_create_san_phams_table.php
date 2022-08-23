@@ -18,6 +18,7 @@ class CreateSanPhamsTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->integer('price');
+            $table->string('describe')->nullable();
             $table->integer('quantity')->nullable();
             $table->integer('is_view')->default(1);
             $table->string('image');

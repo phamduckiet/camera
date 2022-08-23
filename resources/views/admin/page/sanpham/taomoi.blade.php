@@ -48,29 +48,29 @@
                       <input class="form-control" id="quantity" type="number" data-bs-original-title="" title="">
                     </div>
                   </div>
-                  <div class="col-3">
-                    <div class="mb-3">
-                      <label>Ẩn/Hiện</label>
-                      <input class="form-control" id="is_view" type="text" data-bs-original-title="" title="">
-                    </div>
-                  </div>
+
                   <div class="col-3">
                     <div class="mb-3">
                       <label class="form-label">Ẩn/Hiện</label>
                       <select class="form-select digits" id="is_view">
-                        <option>Chọn...</option>
-                        <option>Ẩn</option>
-                        <option>Hiện</option>
+                        <option value="">Chọn...</option>
+                        <option value=0>Ẩn</option>
+                        <option value=1>Hiện</option>
                       </select>
                     </div>
                   </div>
-                  <div class="col-3">
-                    <div class="mb-3">
-                      <label>Thiết bị</label>
-                      <input class="form-control" id="thietbi_id" type="text" data-bs-original-title="" title="">
+                  <div class="col-4">
+                    <div class="mb-4">
+                      <label class="form-label">Thiết bị</label>
+                      <select class="form-select digits" id="thietbi_id">
+                        <option value=0>Chọn...</option>
+                        @foreach ($thietbi_id as $value )
+                            <option value={{$value->id}}>{{$value->tenthietbi}}</option>
+                        @endforeach
+                      </select>
                     </div>
                   </div>
-                <div class="col-6">
+                <div class="col-8">
                     <label>Hình Ảnh Minh Họa</label>
                     <div class="input-group">
                         <input id="image"  class="form-control">
@@ -78,7 +78,7 @@
                             Choose
                         </a>
                     </div>
-                    <img id="holder-icon" class="img-thumbnail" style="width:333px; height:300px">
+                    <img id="holder-icon" class="img-thumbnail mt-3" style="width:450px; height:450px">
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
                 <script src="/vendor/laravel-filemanager/js/lfm.js"></script>
                 <script>
@@ -124,26 +124,26 @@
                 str = str.replace(/^-+|-+$/g, '');
                 return str;
              }
-            $("#create").click(function(){
+            $("#createProduct").click(function(){
 
                 var payload = {
                     'name'              :   $("#name").val(),
                     'slug'              :   $("#slug").val(),
-                    'price'              :   $("price").val(),
-                    'quantity'              :   $("#quatity").val(),
-                    'is_view'              :   $("#is_view").val(),
-                    'image'              :   $("#image").val(),
-                    'thietbi_id'              :   $("#thietbi_id").val(),
-
+                    'price'             :   $("#price").val(),
+                    'describe'          :   $("#describe").val(),
+                    'quantity'          :   $("#quantity").val(),
+                    'is_view'           :   $("#is_view").val(),
+                    'image'             :   $("#image").val(),
+                    'thietbi_id'        :   $("#thietbi_id").val(),
 
                 };
                $.ajax({
-                    url : '/admin/taomoithietbi',
+                    url : '/admin/taomoisanpham',
                     type: 'post',
                     data: payload,
                     success: function($xxx){
                         if($xxx.status == true){
-                            toastr.success("Created category successfully!");
+                            toastr.success("Tạo mới sản phẩm thành công!");
                         }
                         location.reload();
                     },

@@ -13,6 +13,7 @@ class SanPham extends Model
         'name',
         'slug',
         'price',
+        'describe',
         'quantity',
         'is_view',
         'image',
