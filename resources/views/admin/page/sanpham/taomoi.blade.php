@@ -36,12 +36,7 @@
                       <input class="form-control" id="price" type="number" data-bs-original-title="" title="">
                     </div>
                   </div>
-                  <div class="col-3">
-                    <div class="mb-3">
-                      <label>Mô tả</label>
-                      <input class="form-control" id="describe" type="text" data-bs-original-title="" title="">
-                    </div>
-                  </div>
+
                   <div class="col-3">
                     <div class="mb-3">
                       <label>Số lượng</label>
@@ -54,12 +49,12 @@
                       <label class="form-label">Ẩn/Hiện</label>
                       <select class="form-select digits" id="is_view">
                         <option value="">Chọn...</option>
-                        <option value=0>Ẩn</option>
                         <option value=1>Hiện</option>
+                        <option value=0>Ẩn</option>
                       </select>
                     </div>
                   </div>
-                  <div class="col-4">
+                  <div class="col-3">
                     <div class="mb-4">
                       <label class="form-label">Thiết bị</label>
                       <select class="form-select digits" id="thietbi_id">
@@ -70,7 +65,30 @@
                       </select>
                     </div>
                   </div>
-                <div class="col-8">
+                  <div class="col-7">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#info_product" role="tab"><i data-feather='clipboard'></i class="text-danger">Infor Product</a>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show file-text" id="info_product" role="tabpanel">
+                            <textarea id="ckeditorInfoproduct" cols="30" class="form-control" rows="10"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+                <script>
+                    var options = {
+                        filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+                        filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+                        filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+                        filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
+                    };
+                </script>
+                <script>
+                    CKEDITOR.replace('ckeditorInfoproduct', options);
+                </script>
+
+                <div class="col-5">
                     <label>Hình Ảnh Minh Họa</label>
                     <div class="input-group">
                         <input id="image"  class="form-control">
@@ -130,11 +148,12 @@
                     'name'              :   $("#name").val(),
                     'slug'              :   $("#slug").val(),
                     'price'             :   $("#price").val(),
-                    'describe'          :   $("#describe").val(),
                     'quantity'          :   $("#quantity").val(),
                     'is_view'           :   $("#is_view").val(),
                     'image'             :   $("#image").val(),
                     'thietbi_id'        :   $("#thietbi_id").val(),
+                    'describe'  :   CKEDITOR.instances["ckeditorInfoproduct"].getData(),
+
 
                 };
                $.ajax({

@@ -14,12 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-//  Route::get('/', function () {
-//      return view("admin.client.master");
-//  });
-Route::get('/', function () {
-    return view('client.share.master');
-});
+  Route::get('/', function () {
+      return view("client.share.master");
+  });
+// Route::get('/', function () {
+//     return view('client.share.master');
+// });
 
 Route::get('/admin/dangnhap', [\App\Http\Controllers\TaikhoanadminController::class, 'viewdangnhap'])->name('viewdangnhap');
 Route::post('/admin/dangnhap', [\App\Http\Controllers\TaikhoanadminController::class, 'postdangnhap'])->name('postdangnhap');

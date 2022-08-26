@@ -166,37 +166,6 @@
                                                                                 </select>
                                                                               </div>
                                                                             </div>
-                                                                            <div class="col-10">
-                                                                                <div class="tab-content">
-                                                                                    <div class="tab-pane fade" id="info_product" role="tabpanel">
-                                                                                        <textarea id="ckeditorInfoproduct" cols="30" class="form-control" rows="10"></textarea>
-                                                                                    </div>
-                                                                                    <div class="tab-pane fade active show file-text"  id="description" role="tabpanel">
-                                                                                        <textarea id="ckeditorDescription" cols="30" class="form-control" rows="10"></textarea>
-                                                                                    </div>
-                                                                                    <div class="tab-pane fade" id="detail" role="tabpanel">
-                                                                                        <textarea  id="ckeditorDetail" cols="30" class="form-control" rows="10"></textarea>
-                                                                                    </div>
-                                                                                    <div class="tab-pane fade" id="review" role="tabpanel">
-                                                                                        <textarea  id="ckeditorReview" cols="30" class="form-control" rows="10"></textarea>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
-                                                                            <script>
-                                                                                var options = {
-                                                                                    filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
-                                                                                    filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
-                                                                                    filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
-                                                                                    filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
-                                                                                };
-                                                                            </script>
-                                                                            <script>
-                                                                                CKEDITOR.replace('ckeditorInfoproduct', options);
-                                                                                CKEDITOR.replace('ckeditorDescription', options);
-                                                                                CKEDITOR.replace('ckeditorDetail', options);
-                                                                                CKEDITOR.replace('ckeditorReview', options);
-                                                                            </script>
 
                                                                           <div class="col-8">
                                                                               <label>Hình Ảnh Minh Họa</label>
