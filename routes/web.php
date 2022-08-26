@@ -13,8 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return view('client.page.index');
+});
 
-  Route::get('/', function () {
+Route::get('/', function () {
       return view("client.share.master");
   });
 // Route::get('/', function () {
