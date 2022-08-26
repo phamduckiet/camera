@@ -38,3 +38,8 @@
 <!-- Modernizr js -->
 <script src="client/js/vendor/modernizr-2.8.3.min.js"></script>
 <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+<style>
+    a {
+        font-family: "Arial";
+    }
+</style>

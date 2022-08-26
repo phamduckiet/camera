@@ -34,7 +34,7 @@
               <label class="badge badge-success">Admin</label>
               <a class="sidebar-link sidebar-title" href="#">
                 <i data-feather="home"></i>
-                <span>Thiêt Bị</span>
+                <span>Thiết Bị</span>
               </a>
               <ul class="sidebar-submenu">
                 <li>

@@ -3,7 +3,7 @@
 <div class="page-title">
     <div class="row">
       <div class="col-6">
-        <h3>Thêm Mới Thiết Bị</h3>
+        <h3 style="font-family: Arial">Thêm Mới Thiết Bị</h3>
       </div>
       <div class="col-6">
       </div>
