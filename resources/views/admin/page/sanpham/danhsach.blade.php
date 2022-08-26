@@ -138,6 +138,7 @@
                                                                                 <input class="form-control" id="describe" type="text" data-bs-original-title="" title="">
                                                                               </div>
                                                                             </div>
+
                                                                             <div class="col-3">
                                                                               <div class="mb-3">
                                                                                 <label>Số lượng</label>
@@ -165,6 +166,7 @@
                                                                                 </select>
                                                                               </div>
                                                                             </div>
+
                                                                           <div class="col-8">
                                                                               <label>Hình Ảnh Minh Họa</label>
                                                                               <div class="input-group">
@@ -327,10 +329,6 @@
 
         });
     </script>
-
-
-
-
 <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
 <script type="text/javascript"></script>
