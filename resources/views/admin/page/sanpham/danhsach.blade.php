@@ -40,7 +40,7 @@
                     <td class="text-center align-middle">{{ $value->nameThietBi }}</td>
                     <td class="text-center align-middle">{{ $value->price }}</td>
                     <td class="text-center align-middle">{{ $value->quantity }}</td>
-                    <td class="text-center align-middle">{{ $value->describe }}</td>
+                    <td class="text-center align-middle">{!! $value->describe !!}</td>
                     <td class="text-center align-middle">
                         <span class="btn view {{$value->is_view == 1 ? 'btn-success' : 'btn-danger'}}" data-id="{{$value->id}}">{{ $value->is_view == 1 ? 'Hiện' : 'Ẩn' }} </span>
                     </td>
