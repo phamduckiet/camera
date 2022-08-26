@@ -66,8 +66,9 @@
                     </div>
                   </div>
                   <div class="col-7">
-                    <ul class="nav nav-pills">
-                        <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#info_product" role="tab"><i data-feather='clipboard'></i class="text-danger">Infor Product</a>
+                    <ul >
+                        <label class="form-label">Mô tả sản phẩm</label>
+                        <li type="hidden"><a type="hidden"  href="#info_product" ><i type="hidden"></i></a>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane fade active show file-text" id="info_product" role="tabpanel">
