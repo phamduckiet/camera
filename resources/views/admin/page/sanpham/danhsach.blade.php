@@ -65,7 +65,7 @@
 </div>
     <div class="modal fade" id="addNewCard" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel2">Thông Báo</h5>
@@ -87,7 +87,7 @@
         </div>
     </div>
     <div class="modal fade" id="edit-sanpham">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-edit-user" data-select2-id="84">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-edit-user" data-select2-id="84">
             <div class="modal-content" data-select2-id="83">
                 <div class="modal-header bg-transparent">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -95,7 +95,7 @@
                 <div class="modal-body pb-5 px-sm-5 pt-50" data-select2-id="82">
                     <div class="text-center mb-2">
                         <input type="hidden" id="product_id">
-                        <h1 class="mb-1">Chỉnh Sửa Sản Phẩm</h1>
+                        <h1 class="mb-1" style="font-family: Arial">Chỉnh Sửa Sản Phẩm</h1>
                     </div>
                     <form id="editForm" class="row gy-1 pt-75" onsubmit="return false" novalidate="novalidate">
                         <div class="row">
@@ -132,12 +132,7 @@
                                                                                 <input class="form-control" id="price" type="number" data-bs-original-title="" title="">
                                                                               </div>
                                                                             </div>
-                                                                            <div class="col-3">
-                                                                              <div class="mb-3">
-                                                                                <label>Mô tả</label>
-                                                                                <input class="form-control" id="describe" type="text" data-bs-original-title="" title="">
-                                                                              </div>
-                                                                            </div>
+
 
                                                                             <div class="col-3">
                                                                               <div class="mb-3">
@@ -156,7 +151,7 @@
                                                                                 </select>
                                                                               </div>
                                                                             </div>
-                                                                            <div class="col-4">
+                                                                            <div class="col-3">
                                                                               <div class="mb-4">
                                                                                 <label class="form-label">Thiết bị</label>
                                                                                 <select class="form-select digits" id="thietbi_id">
@@ -167,7 +162,7 @@
                                                                               </div>
                                                                             </div>
 
-                                                                          <div class="col-8">
+                                                                          <div class="col-5">
                                                                               <label>Hình Ảnh Minh Họa</label>
                                                                               <div class="input-group">
                                                                                   <input name="image" id="image"  class="form-control">
@@ -182,6 +177,29 @@
                                                                               $('.lfm').filemanager('image');
                                                                           </script>
                                                                           </div>
+                                                                          <div class="col-7">
+                                                                            <ul >
+                                                                                <label class="form-label" >Mô tả sản phẩm</label>
+                                                                                <li type="hidden"><a type="hidden"  href="#info_product" ><i type="hidden"></i></a>
+                                                                            </ul>
+                                                                            <div class="tab-content">
+                                                                                <div class="tab-pane fade active show file-text" id="info_product" role="tabpanel">
+                                                                                    <textarea id="ckeditorInfoproduct" cols="30" class="form-control" rows="10"></textarea>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+                                                                        <script>
+                                                                            var options = {
+                                                                                filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+                                                                                filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+                                                                                filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+                                                                                filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
+                                                                            };
+                                                                        </script>
+                                                                        <script>
+                                                                            CKEDITOR.replace('ckeditorInfoproduct', options);
+                                                                        </script>
                                                                         </div>
                                                                       </div>
 
@@ -239,7 +257,7 @@
                         $('#name').val(response.data.name);
                         $('#slug').val(response.data.slug);
                         $('#price').val(response.data.price);
-                        $('#describe').val(response.data.describe);
+                        CKEDITOR.instances['ckeditorInfoproduct'].setData(response.data.describe);
                         $('#quantity').val(response.data.quantity);
                         $('#is_view').val(response.data.is_view);
                         $('#image').val(response.data.image);
@@ -252,7 +270,7 @@
                             'name'              :   $("#name").val(),
                             'slug'              :   $("#slug").val(),
                             'price'             :   $("#price").val(),
-                            'describe'          :   $("#describe").val(),
+                            'describe'  :   CKEDITOR.instances["ckeditorInfoproduct"].getData(),
                             'quantity'          :   $("#quantity").val(),
                             'is_view'           :   $("#is_view").val(),
                             'image'             :   $("#image").val(),

@@ -66,8 +66,14 @@
                     </div>
                   </div>
                   <div class="col-7">
+<<<<<<< HEAD
                     <ul>
                         <label><a href="#info_product">Mô tả</a></label>
+=======
+                    <ul >
+                        <label class="form-label">Mô tả sản phẩm</label>
+                        <li type="hidden"><a type="hidden"  href="#info_product" ><i type="hidden"></i></a>
+>>>>>>> 72ad8f102ea0691ed22a6457c28b5cefa999305c
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane fade active show file-text" id="info_product" role="tabpanel">
