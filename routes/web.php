@@ -44,6 +44,18 @@ Route::group(['prefix' => '/admin' ,'middleware' => 'checkAdmin'], function(){
     Route::post('/changeView', [\App\Http\Controllers\SanPhamController::class, 'changeValueView'])->name('change.View');
 });
 
+Route::group(['prefix' => '/'], function(){
+    Route::get('', [\App\Http\Controllers\HomeController::class, 'index']);
+    Route::get('detail/{slug}', [\App\Http\Controllers\HomeController::class, 'detail']);
+
+Route::group(['prefix' => '/cart'], function(){
+    Route::get('/index', [\App\Http\Controllers\GioHangController::class, 'index']);
+
+
+});
+
+
+});
 
 
 

@@ -16,24 +16,24 @@
       <div class="card-body">
         <div class="table-responsive">
           <div id="basic-2_wrapper" class="dataTables_wrapper no-footer">
-            <table class="display dataTable no-footer" id="datatable" role="grid" aria-describedby="basic-2_info">
+            <table class="display dataTable no-footer table table-bordered border-dark" id="datatable" role="grid" aria-describedby="basic-2_info">
               <thead>
                 <tr role="row" class="table table-border-vertical">
-                  <th class="text-center" scope="col">Stt</th>
-                  <th class="text-center" scope="col">Tên</th>
-                  <th class="text-center" scope="col">Slug</th>
-                  <th class="text-center" scope="col">Thiết Bị</th>
-                  <th class="text-center" scope="col">Giá</th>
-                  <th class="text-center" scope="col">Số lượng</th>
-                  <th class="text-center" scope="col">Mô tả</th>
-                  <th class="text-center" scope="col">Ẩn/Hiện</th>
-                  <th class="text-center" scope="col">Hình Ảnh</th>
-                  <th class="text-center" scope="col">Hành Động</th>
+                  <th class="text-center align-middle text-nowrap" style="font-family: Arial" scope="col">Stt</th>
+                  <th class="text-center align-middle text-nowrap" style="font-family: Arial" scope="col">Tên</th>
+                  <th class="text-center align-middle text-nowrap" style="font-family: Arial" scope="col">Slug</th>
+                  <th class="text-center align-middle text-nowrap" style="font-family: Arial" scope="col">Thiết Bị</th>
+                  <th class="text-center align-middle text-nowrap" style="font-family: Arial" scope="col">Giá</th>
+                  <th class="text-center align-middle text-nowrap" style="font-family: Arial" scope="col">Số lượng</th>
+                  <th class="text-center align-middle text-nowrap" style="font-family: Arial" scope="col">Mô tả</th>
+                  <th class="text-center align-middle text-nowrap" style="font-family: Arial" scope="col">Ẩn/Hiện</th>
+                  <th class="text-center align-middle text-nowrap" style="font-family: Arial" scope="col">Hình Ảnh</th>
+                  <th class="text-center align-middle text-nowrap" style="font-family: Arial" scope="col">Hành Động</th>
                 </tr>
               </thead>
               <tbody>
                 @foreach ($sanpham as $key => $value)
-                <tr class="table table-border-vertical">
+                <tr class="table ">
                     <th class="text-center align-middle" scope="row">{{ $key + 1 }}</th>
                     <td class="text-center align-middle">{{ $value->name }}</td>
                     <td class="text-center align-middle">{{ $value->slug }}</td>

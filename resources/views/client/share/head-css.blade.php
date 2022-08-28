@@ -42,4 +42,16 @@
     a {
         font-family: "Arial";
     }
+
+    @font-face {
+        font-family: 'font-icon';
+        src:url('fonts/iconfont.eot');
+        src:url('fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+            url('fonts/iconfont.woff') format('woff'),
+            url('fonts/iconfont.ttf') format('truetype'),
+            url('fonts/iconfont.svg#font-icon') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        charset:utf-8;
+}
 </style>

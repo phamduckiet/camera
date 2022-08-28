@@ -19,10 +19,10 @@
             <table class="display dataTable no-footer" id="datatable" role="grid" aria-describedby="basic-2_info">
               <thead>
                 <tr role="row">
-                  <th class="text-center" scope="col">Stt</th>
-                  <th class="text-center" scope="col">Tên Thiết Bị</th>
-                  <th class="text-center" scope="col">Hình Ảnh Minh Họa</th>
-                  <th class="text-center" scope="col">Hành Động</th>
+                  <th class="text-center"  style="font-family: Arial" scope="col">Stt</th>
+                  <th class="text-center"  style="font-family: Arial"scope="col">Tên Thiết Bị</th>
+                  <th class="text-center"  style="font-family: Arial" scope="col">Hình Ảnh Minh Họa</th>
+                  <th class="text-center"  style="font-family: Arial" scope="col">Hành Động</th>
                 </tr>
               </thead>
               <tbody>
