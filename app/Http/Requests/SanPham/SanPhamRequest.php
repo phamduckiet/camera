@@ -27,6 +27,7 @@ class SanPhamRequest extends FormRequest
             'name'        =>'required|max:100',
             'slug'        =>'required|max:100',
             'is_view'     =>'required|boolean',
+            'quantity'    => 'required',
         ];
     }
 }
