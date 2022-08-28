@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('client.page.index');
-});
 // Route::get('/', function () {
-//     return view('client.share.master');
+//     return view('client.page.index');
 // });
+Route::get('/123', function () {
+    return view('client.page.shopthietbi');
+});
 
 Route::get('/admin/dangnhap', [\App\Http\Controllers\TaikhoanadminController::class, 'viewdangnhap'])->name('viewdangnhap');
 Route::post('/admin/dangnhap', [\App\Http\Controllers\TaikhoanadminController::class, 'postdangnhap'])->name('postdangnhap');
@@ -43,6 +43,13 @@ Route::group(['prefix' => '/admin' ,'middleware' => 'checkAdmin'], function(){
     Route::get('/sanpham/delete/{id}', [\App\Http\Controllers\SanPhamController::class, 'delete']);
     Route::post('/changeView', [\App\Http\Controllers\SanPhamController::class, 'changeValueView'])->name('change.View');
 });
+// Route::group(['prefix' => '/'], function(){
+    Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
+    Route::get('/{id}', [\App\Http\Controllers\HomeController::class, 'thietbishop']);
+    Route::get('/sanphamne', [\App\Http\Controllers\HomeController::class, 'detail']);
+
+// });
+
 
 
 
