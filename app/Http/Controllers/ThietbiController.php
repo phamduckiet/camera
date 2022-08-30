@@ -14,11 +14,11 @@ class ThietbiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function viewthietbi()
     {
         return view('admin.page.thietbi.taomoi');
-
-
 
     }
 

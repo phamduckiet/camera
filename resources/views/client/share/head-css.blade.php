@@ -4,39 +4,39 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Favicon -->
-<link rel="shortcut icon" type="image/x-icon" href="client/images/favicon.png">
+<link rel="shortcut icon" type="image/x-icon" href="{{asset('client/images/favicon.png')}}">
 <!-- Material Design Iconic Font-V2.2.0 -->
-<link rel="stylesheet" href="client/css/material-design-iconic-font.min.css">
+<link rel="stylesheet" href="{{asset('client/css/material-design-iconic-font.min.css')}}">
 <!-- Font Awesome -->
-<link rel="stylesheet" href="client/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{asset('client/css/font-awesome.min.css')}}">
 <!-- Font Awesome Stars-->
-<link rel="stylesheet" href="client/css/fontawesome-stars.css">
+<link rel="stylesheet" href="{{asset('client/css/fontawesome-stars.css')}}">
 <!-- Meanmenu CSS -->
-<link rel="stylesheet" href="client/css/meanmenu.css">
+<link rel="stylesheet" href="{{asset('client/css/meanmenu.css')}}">
 <!-- owl carousel CSS -->
-<link rel="stylesheet" href="client/css/owl.carousel.min.css">
+<link rel="stylesheet" href="{{asset('client/css/owl.carousel.min.css')}}">
 <!-- Slick Carousel CSS -->
-<link rel="stylesheet" href="client/css/slick.css">
+<link rel="stylesheet" href="{{asset('client/css/slick.css')}}">
 <!-- Animate CSS -->
-<link rel="stylesheet" href="client/css/animate.css">
+<link rel="stylesheet" href="{{asset('client/css/animate.css')}}">
 <!-- Jquery-ui CSS -->
-<link rel="stylesheet" href="client/css/jquery-ui.min.css">
+<link rel="stylesheet" href="{{asset('client/css/jquery-ui.min.css')}}">
 <!-- Venobox CSS -->
-<link rel="stylesheet" href="client/css/venobox.css">
+<link rel="stylesheet" href="{{asset('client/css/venobox.css')}}">
 <!-- Nice Select CSS -->
-<link rel="stylesheet" href="client/css/nice-select.css">
+<link rel="stylesheet" href="{{asset('client/css/nice-select.css')}}">
 <!-- Magnific Popup CSS -->
-<link rel="stylesheet" href="client/css/magnific-popup.css">
+<link rel="stylesheet" href="{{asset('client/css/magnific-popup.css')}}">
 <!-- Bootstrap V4.1.3 Fremwork CSS -->
-<link rel="stylesheet" href="client/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{asset('client/css/bootstrap.min.css')}}">
 <!-- Helper CSS -->
-<link rel="stylesheet" href="client/css/helper.css">
+<link rel="stylesheet" href="{{asset('client/css/helper.css')}}">
 <!-- Main Style CSS -->
-<link rel="stylesheet" href="client/style.css">
+<link rel="stylesheet" href="{{asset('client/style.css')}}">
 <!-- Responsive CSS -->
-<link rel="stylesheet" href="client/css/responsive.css">
+<link rel="stylesheet" href="{{asset('client/css/responsive.css')}}">
 <!-- Modernizr js -->
-<script src="client/js/vendor/modernizr-2.8.3.min.js"></script>
+<script src="{{asset('client/js/vendor/modernizr-2.8.3.min.js')}}"></script>
 <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
 <style>
     a {

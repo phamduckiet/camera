@@ -5,7 +5,7 @@
             <div class="col-lg-3">
                 <div class="logo pb-sm-30 pb-xs-30">
                     <a href="index.html">
-                        <img src="client/images/menu/logo/1.jpg" alt="">
+                        <img src="{{asset('client/images/menu/logo/1.jpg')}}" alt="">
                     </a>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                                 <ul class="minicart-product-list">
                                     <li>
                                         <a href="single-product.html" class="minicart-product-image">
-                                            <img src="client/images/product/small-size/5.jpg" alt="cart products">
+                                            <img src="{{asset('client/images/product/small-size/5.jpg')}}" alt="">
                                         </a>
                                         <div class="minicart-product-details">
                                             <h6><a href="single-product.html">Aenean eu tristique</a></h6>
@@ -54,7 +54,7 @@
                                     </li>
                                     <li>
                                         <a href="single-product.html" class="minicart-product-image">
-                                            <img src="client/images/product/small-size/6.jpg" alt="cart products">
+                                            <img src="{{asset('client/images/product/small-size/6.jpg')}}" alt="">
                                         </a>
                                         <div class="minicart-product-details">
                                             <h6><a href="single-product.html">Aenean eu tristique</a></h6>
@@ -94,9 +94,9 @@
                 <div class="hb-menu">
                     <nav>
                         <ul>
-                            <li><a href="/">Trang Chủ</a></li>
+                            <li><a href="/index/camera">Trang Chủ</a></li>
                             @foreach ($thietbi as $value )
-                            <li><a href="/{{$value->id}}">{{$value->tenthietbi}}</a></li>
+                            <li><a href="/camera/thiet-bi/{{$value->id}}">{{$value->tenthietbi}}</a></li>
                             @endforeach
                         </ul>
                     </nav>
