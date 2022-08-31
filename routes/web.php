@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('client.page.index');
-});
+// Route::get('/detail', function () {
+//     return view('client.page.detail');
+// });
 // Route::get('/', function () {
 //     return view('client.share.master');
 // });
@@ -42,17 +42,18 @@ Route::group(['prefix' => '/admin' ,'middleware' => 'checkAdmin'], function(){
     Route::post('/sanpham/update/{id}', [\App\Http\Controllers\SanPhamController::class, 'update']);
     Route::get('/sanpham/delete/{id}', [\App\Http\Controllers\SanPhamController::class, 'delete']);
     Route::post('/changeView', [\App\Http\Controllers\SanPhamController::class, 'changeValueView'])->name('change.View');
+
+    Route::get('/danhsachlapdat', [\App\Http\Controllers\LapDatController::class, 'dslapdat']);
+    Route::get('/lapdat/delete/{id}', [\App\Http\Controllers\LapDatController::class, 'destroy']);
+
+
 });
 
 Route::group(['prefix' => '/'], function(){
     Route::get('', [\App\Http\Controllers\HomeController::class, 'index']);
-    Route::get('detail/{slug}', [\App\Http\Controllers\HomeController::class, 'detail']);
-
-Route::group(['prefix' => '/cart'], function(){
-    Route::get('/index', [\App\Http\Controllers\GioHangController::class, 'index']);
-
-
-});
+    Route::get('/sanpham/{id}', [\App\Http\Controllers\HomeController::class, 'detail']);
+    Route::get('/lapdat', [\App\Http\Controllers\LapDatController::class, 'index']);
+    Route::post('/lapdat', [\App\Http\Controllers\LapDatController::class, 'store'])->name('lapdat');
 
 
 });

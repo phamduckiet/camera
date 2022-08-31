@@ -16,18 +16,18 @@ class HomeController extends Controller
         $sanpham = SanPham::join('thietbis', 'thietbi_id', 'thietbis.id')
         ->select('san_phams.*', 'thietbis.tenthietbi as nameThietBi')
         ->get();
-        $thietbi = thietbi::all();
-        return view('client.page.index', compact('thietbi','sanpham'));
+        return view('client.page.index', compact('sanpham'));
     }
-    public function detail($slug)
+    public function detail($id)
     {
-        $i = 0;
-        for($i = strlen($slug)-1; $i >= 0; $i--){
-            if($slug[$i] == '-'){
-                break;
-            }
-        }
-        $id = Str::substr($slug, $i + 1, strlen($slug)- $i);
+        dd($id);
+        // $i = 0;
+        // for($i = strlen($slug)-1; $i >= 0; $i--){
+        //     if($slug[$i] == '-'){
+        //         break;
+        //     }
+        // }
+        // $id = Str::substr($slug, $i + 1, strlen($slug)- $i);
 
         // $cart = null;
         // if($user){
@@ -35,14 +35,15 @@ class HomeController extends Controller
         // }
         //  $cart = GioHang::where('type', 0)->get();
 
-        $data = SanPham::find($id);
-        $sanphams = SanPham::all();
-        if($data){
-            $sanpham = SanPham::where('id', $data->id)->get();
-            return view('client.page.detail', compact('sanpham', 'data','sanphams'));
-        } else {
-            toastr()->error("Sản phẩm không tồn tại");
-            return redirect('/');
-        }
+        // $data = SanPham::find($id);
+        // $sanphams = SanPham::all();
+        // if($data){
+        //     $sanpham = SanPham::where('id', $data->id)->get();
+        //     return view('client.page.detail', compact('sanpham', 'data','sanphams'));
+        // } else {
+        //     toastr()->error("Sản phẩm không tồn tại");
+        //     return redirect('/');
+        // }
     }
+
 }

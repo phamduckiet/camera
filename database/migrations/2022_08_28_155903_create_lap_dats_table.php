@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGioHangsTable extends Migration
+class CreateLapDatsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateGioHangsTable extends Migration
      */
     public function up()
     {
-        Schema::create('gio_hangs', function (Blueprint $table) {
+        Schema::create('lap_dats', function (Blueprint $table) {
             $table->id();
-            $table->integer('auto_user');
-            $table->integer('product_id');
-            $table->integer('address');
-            $table->integer('qty');
+            $table->string('ten');
+            $table->string('std');
+            $table->integer('theloai');
+            $table->string('ghichu')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateGioHangsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gio_hangs');
+        Schema::dropIfExists('lap_dats');
     }
 }

@@ -35,6 +35,8 @@
 <link rel="stylesheet" href="client/style.css">
 <!-- Responsive CSS -->
 <link rel="stylesheet" href="client/css/responsive.css">
+<meta name="csrf-token" content="{{ csrf_token() }}" />
+
 <!-- Modernizr js -->
 <script src="client/js/vendor/modernizr-2.8.3.min.js"></script>
 <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
@@ -43,15 +45,6 @@
         font-family: "Arial";
     }
 
-    @font-face {
-        font-family: 'font-icon';
-        src:url('fonts/iconfont.eot');
-        src:url('fonts/iconfont.eot?#iefix') format('embedded-opentype'),
-            url('fonts/iconfont.woff') format('woff'),
-            url('fonts/iconfont.ttf') format('truetype'),
-            url('fonts/iconfont.svg#font-icon') format('svg');
-        font-weight: normal;
-        font-style: normal;
-        charset:utf-8;
-}
+
 </style>
+
