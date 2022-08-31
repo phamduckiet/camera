@@ -62,6 +62,54 @@
                 <!--// Product Details Left -->
             </div>
 
+
+                    <div class="product-details-client/images slider-navigation-1 slick-initialized slick-slider">
+                        <div class="slick-list draggable" aria-live="polite"><div class="slick-track" role="listbox" style="width: 3760px; opacity: 1; transform: translate3d(-470px, 0px, 0px);"><div tabindex="-1" class="lg-image slick-slide slick-cloned" aria-hidden="true" style="width: 470px;" data-slick-index="-1">
+                            <a tabindex="-1" class="popup-img venobox vbox-item" href="client/images/product/large-size/6.jpg" data-gall="myGallery">
+                                <img alt="product image" src="client/images/product/large-size/6.jpg">
+                            </a>
+                        </div><div tabindex="-1" class="lg-image slick-slide slick-current slick-active" role="option" aria-hidden="false" aria-describedby="slick-slide00" style="width: 470px;" data-slick-index="0">
+                            <a tabindex="0" class="popup-img venobox vbox-item" href="client/images/product/large-size/1.jpg" data-gall="myGallery">
+                                <img alt="product image" src="client/images/product/large-size/1.jpg">
+                            </a>
+                        </div><div tabindex="-1" class="lg-image slick-slide" role="option" aria-hidden="true" aria-describedby="slick-slide01" style="width: 470px;" data-slick-index="1">
+                            <a tabindex="-1" class="popup-img venobox vbox-item" href="client/images/product/large-size/2.jpg" data-gall="myGallery">
+                                <img alt="product image" src="client/images/product/large-size/2.jpg">
+                            </a>
+                        </div><div tabindex="-1" class="lg-image slick-slide" role="option" aria-hidden="true" aria-describedby="slick-slide02" style="width: 470px;" data-slick-index="2">
+                            <a tabindex="-1" class="popup-img venobox vbox-item" href="client/images/product/large-size/3.jpg" data-gall="myGallery">
+                                <img alt="product image" src="client/images/product/large-size/3.jpg">
+                            </a>
+                        </div><div tabindex="-1" class="lg-image slick-slide" role="option" aria-hidden="true" aria-describedby="slick-slide03" style="width: 470px;" data-slick-index="3">
+                            <a tabindex="-1" class="popup-img venobox vbox-item" href="client/images/product/large-size/4.jpg" data-gall="myGallery">
+                                <img alt="product image" src="client/images/product/large-size/4.jpg">
+                            </a>
+                        </div><div tabindex="-1" class="lg-image slick-slide" role="option" aria-hidden="true" aria-describedby="slick-slide04" style="width: 470px;" data-slick-index="4">
+                            <a tabindex="-1" class="popup-img venobox vbox-item" href="client/images/product/large-size/5.jpg" data-gall="myGallery">
+                                <img alt="product image" src="client/images/product/large-size/5.jpg">
+                            </a>
+                        </div><div tabindex="-1" class="lg-image slick-slide" role="option" aria-hidden="true" aria-describedby="slick-slide05" style="width: 470px;" data-slick-index="5">
+                            <a tabindex="-1" class="popup-img venobox vbox-item" href="client/images/product/large-size/6.jpg" data-gall="myGallery">
+                                <img alt="product image" src="client/images/product/large-size/6.jpg">
+                            </a>
+                        </div><div tabindex="-1" class="lg-image slick-slide slick-cloned" aria-hidden="true" style="width: 470px;" data-slick-index="6">
+                            <a tabindex="-1" class="popup-img venobox vbox-item" href="client/images/product/large-size/1.jpg" data-gall="myGallery">
+                                <img alt="product image" src="client/images/product/large-size/1.jpg">
+                            </a>
+                        </div></div></div>
+
+
+
+
+
+                    </div>
+                    <div class="product-details-thumbs slider-thumbs-1 slick-initialized slick-slider"><span class="slick-prev slick-arrow" style="display: block;"><i class="fa fa-angle-left"></i></span>
+                        <div class="slick-list draggable" aria-live="polite" style="padding: 0px;"><div class="slick-track" role="listbox" style="width: 1888px; opacity: 1; transform: translate3d(-354px, 0px, 0px);"><div tabindex="-1" class="sm-image slick-slide slick-cloned" aria-hidden="true" style="width: 118px;" data-slick-index="-5"><img alt="product image thumb" src="client/images/product/small-size/2.jpg"></div><div tabindex="-1" class="sm-image slick-slide slick-cloned" aria-hidden="true" style="width: 118px;" data-slick-index="-4"><img alt="product image thumb" src="client/images/product/small-size/3.jpg"></div><div tabindex="-1" class="sm-image slick-slide slick-cloned" aria-hidden="true" style="width: 118px;" data-slick-index="-3"><img alt="product image thumb" src="client/images/product/small-size/4.jpg"></div><div tabindex="-1" class="sm-image slick-slide slick-cloned slick-active" aria-hidden="false" style="width: 118px;" data-slick-index="-2"><img alt="product image thumb" src="client/images/product/small-size/5.jpg"></div><div tabindex="-1" class="sm-image slick-slide slick-cloned slick-active" aria-hidden="false" style="width: 118px;" data-slick-index="-1"><img alt="product image thumb" src="client/images/product/small-size/6.jpg"></div><div tabindex="-1" class="sm-image slick-slide slick-current slick-active slick-center" role="option" aria-hidden="false" aria-describedby="slick-slide20" style="width: 118px;" data-slick-index="0"><img alt="product image thumb" src="client/images/product/small-size/1.jpg"></div><div tabindex="-1" class="sm-image slick-slide slick-active" role="option" aria-hidden="false" aria-describedby="slick-slide21" style="width: 118px;" data-slick-index="1"><img alt="product image thumb" src="client/images/product/small-size/2.jpg"></div><div tabindex="-1" class="sm-image slick-slide slick-active" role="option" aria-hidden="false" aria-describedby="slick-slide22" style="width: 118px;" data-slick-index="2"><img alt="product image thumb" src="client/images/product/small-size/3.jpg"></div><div tabindex="-1" class="sm-image slick-slide" role="option" aria-hidden="true" aria-describedby="slick-slide23" style="width: 118px;" data-slick-index="3"><img alt="product image thumb" src="client/images/product/small-size/4.jpg"></div><div tabindex="-1" class="sm-image slick-slide" role="option" aria-hidden="true" aria-describedby="slick-slide24" style="width: 118px;" data-slick-index="4"><img alt="product image thumb" src="client/images/product/small-size/5.jpg"></div><div tabindex="-1" class="sm-image slick-slide" role="option" aria-hidden="true" aria-describedby="slick-slide25" style="width: 118px;" data-slick-index="5"><img alt="product image thumb" src="client/images/product/small-size/6.jpg"></div><div tabindex="-1" class="sm-image slick-slide slick-cloned slick-center" aria-hidden="true" style="width: 118px;" data-slick-index="6"><img alt="product image thumb" src="client/images/product/small-size/1.jpg"></div><div tabindex="-1" class="sm-image slick-slide slick-cloned" aria-hidden="true" style="width: 118px;" data-slick-index="7"><img alt="product image thumb" src="client/images/product/small-size/2.jpg"></div><div tabindex="-1" class="sm-image slick-slide slick-cloned" aria-hidden="true" style="width: 118px;" data-slick-index="8"><img alt="product image thumb" src="client/images/product/small-size/3.jpg"></div><div tabindex="-1" class="sm-image slick-slide slick-cloned" aria-hidden="true" style="width: 118px;" data-slick-index="9"><img alt="product image thumb" src="client/images/product/small-size/4.jpg"></div><div tabindex="-1" class="sm-image slick-slide slick-cloned" aria-hidden="true" style="width: 118px;" data-slick-index="10"><img alt="product image thumb" src="client/images/product/small-size/5.jpg"></div></div></div>
+
+                    <span class="slick-next slick-arrow" style="display: block;"><i class="fa fa-angle-right"></i></span></div>
+                </div>
+                <!--// Product Details Left -->
+            </div>
             <div class="col-lg-7 col-md-6">
                 <div class="product-details-view-content pt-60">
                     <div class="product-info">
@@ -90,22 +138,23 @@
                         <div class="product-variants">
                             <div class="produt-variants-size">
                                 <label>Dimension</label>
-                                <select class="nice-select">
-                                    <option value="1" title="S" selected="selected">40x60cm</option>
-                                    <option value="2" title="M">60x90cm</option>
-                                    <option value="3" title="L">80x120cm</option>
-                                </select>
+
+                                <select class="nice-select" style="display: none;">
+                                    <option title="S" selected="selected" value="1">40x60cm</option>
+                                    <option title="M" value="2">60x90cm</option>
+                                    <option title="L" value="3">80x120cm</option>
+                                </select><div tabindex="0" class="nice-select"><span class="current">40x60cm</span><ul class="list"><li class="option selected" data-value="1">40x60cm</li><li class="option" data-value="2">60x90cm</li><li class="option" data-value="3">80x120cm</li></ul></div>
                             </div>
                         </div>
                         <div class="single-add-to-cart">
-                            <form action="#" class="cart-quantity">
+                            <form class="cart-quantity" action="#">
                                 <div class="quantity">
                                     <label>Quantity</label>
                                     <div class="cart-plus-minus">
-                                        <input class="cart-plus-minus-box" value="1" type="text">
+                                        <input class="cart-plus-minus-box" type="text" value="1">
                                         <div class="dec qtybutton"><i class="fa fa-angle-down"></i></div>
                                         <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
-                                    </div>
+                                    <div class="dec qtybutton"><i class="fa fa-angle-down"></i></div><div class="inc qtybutton"><i class="fa fa-angle-up"></i></div></div>
                                 </div>
                                 <button class="add-to-cart" type="submit">Add to cart</button>
                             </form>

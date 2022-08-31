@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,8 +17,12 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/detail', function () {
 //     return view('client.page.detail');
 // });
+
 // Route::get('/', function () {
-//     return view('client.share.master');
+//     return view('client.page.index');
+// });
+// Route::get('/aaa', function () {
+//     return view('client.page.detail');
 // });
 
 Route::get('/admin/dangnhap', [\App\Http\Controllers\TaikhoanadminController::class, 'viewdangnhap'])->name('viewdangnhap');
@@ -55,6 +60,12 @@ Route::group(['prefix' => '/'], function(){
     Route::get('/lapdat', [\App\Http\Controllers\LapDatController::class, 'index']);
     Route::post('/lapdat', [\App\Http\Controllers\LapDatController::class, 'store'])->name('lapdat');
 
+
+});
+Route::group([], function() {
+    Route::get('/index/camera', [\App\Http\Controllers\HomeController::class, 'index']);
+    Route::get('/camera/san-pham/{slug}', [\App\Http\Controllers\HomeController::class, 'detail']);
+    Route::get('/camera/thiet-bi/{id}', [\App\Http\Controllers\HomeController::class, 'thietbishop']);
 
 });
 
